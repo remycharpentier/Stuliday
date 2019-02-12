@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Remy Charpentier">
+    <meta name="description" content="Stuliday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stuliday</title>
+    <!--NORMALIZE-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!--/NORMALIZE-->
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <!--/FONT AWESOME-->
+    <!--FRAMEWORK-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!--/FRAMEWORK-->
+    <!--STYLE CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--/STYLE CSS-->
+</head>
+
+<body class="bg-new-profile">
+    <!--HEADER-->
+    <header id="header">
+        <nav class="h-nav navbar navbar-light ">
+            <a class="h-logo-grp navbar-brand" href="index-connected.html">
+                <img class="h-logo" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top" alt="">
+                <span>Stuliday</span>
+            </a>
+            <div class="navbar-grp">
+                <!--BOUTON-HOST-->
+                <a class="btn new-acc-sub-connected" href="host-annonce.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-envelope"></i> Poster une annonce</span>
+                    </button>
+                </a>
+                <!--BOUTON-FAVORIS-->
+                <a class="btn new-acc-sub-connected" href="fav-list.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-star"></i> Favoris</span>
+                    </button>
+                </a>
+                <!--BOUTON-MES-NOTIFS-->
+                <a class="btn new-acc-sub-connected" href="notif.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-bell"></i> Notifications</span>
+                    </button>
+                </a>
+                <!--BOUTON-MY-PROFILE-->
+                <a class="btn new-acc-sub-connected" href="my-profile.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-user"></i> Mon profil</span>
+                    </button>
+                </a>
+                <!--BOUTON-CONTACT-->
+                <a class="new-acc-sub btn" href="about-us.html" role="button"><span><i class="fas fa-users"></i>
+                        Contacter</span></a>
+            </div>
+        </nav>
+    </header>
+    <!--/HEADER-->
+    <section>
+        <div class="bg-container1-new-profile container">
+            <h3>Consulter un profil utilisateur</h3>
+            <div class="friend">
+                <div class="row">
+                    <!--COL-1-->
+                    <div class="col-4">
+                        <img src="..//img/alix.jpg" alt="">
+                        <button class="user-profile-btn-friendchecked btn btn-success" type="submit" data-toggle="tooltip"
+                            data-placement="top" title="Cet utilisateur est dans votre liste d'amis"><i class="fas fa-user-check"></i></button>
+                        <button class="user-profile-btn-msg btn btn-primary" type="submit" data-toggle="modal"
+                            data-target="#user-profile-message" data-toggle="tooltip" data-placement="top" title="Envoyer un message"><i
+                                class="fas fa-envelope"></i></button>
+                        <!--MODAL-MESSAGE-->
+                        <div class="modal fade" id="user-profile-message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-envelope"></i> Envoyer un message à Alix</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" class="cross">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="host-modal-body modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tapez votre message ici."></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" id="post-annonce-create-account" data-dismiss="modal"
+                                            data-toggle="modal" data-target="#subscribe" class="btn btn-primary">Envoyer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--COL-2-->
+                    <div class="col-4">
+                        <fieldset disabled>
+                            <label for="inputEmail4" class="profile-info-t">Prénom</label>
+                            <input type="first name" class="profile-info-i form-control" placeholder="Alix">
+                            <label for="inputEmail4" class="profile-info-t">Nom</label>
+                            <input type="name" class="profile-info-i form-control" placeholder="Clark">
+                            <label for="inputEmail4" class="profile-info-t">Age</label>
+                            <input type="birth date" class="profile-info-i form-control" placeholder="25 ans">
+                            <label for="inputEmail4" class="profile-info-t">Situation</label>
+                            <input type="situation" class="profile-info-i form-control" placeholder="Célibataire">
+                            <label for="inputEmail4" class="profile-info-t">Ville</label>
+                            <input type="situation" class="profile-info-i form-control" placeholder="Bordeaux">
+                        </fieldset disabled>
+                    </div>
+                    <!--COL-3-->
+                    <div class="col-4">
+                        <fieldset disabled>
+                            <label for="exampleFormControlTextarea1" class="profile-info-t">A son propos</label>
+                            <textarea class="profile-ta1" id="exampleFormControlTextarea1" rows="12" placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem velit neque facere illo consequuntur inventore quia, vel natus minima. Maiores, a voluptas? Magnam debitis, voluptas pariatur vel, animi perferendis odio voluptate dolores inventore praesentium ad nam dolorem consequuntur cum libero quod mollitia, aperiam soluta natus fugiat ipsam? Facilis, dolorum minus!"></textarea>
+                        </fieldset disabled>
+                        <label for="exampleFormControlTextarea1" class="profile-info-t2">Ses informations</label>
+                        <div class="profile-block-check row">
+                            <div class="col">
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <!--CHECK-BOX-->
+                                <div class="profile-grp-check form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <button type="button" class="profile-btn-plus btn btn-sm btn-block" data-toggle="tooltip" data-placement="top" title="Voir plus d'informations concernant cet utilisateur">Voir
+                                    plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--FOOTER-->
+    <div class="wall-footer-new-profile">
+        <div class="bg-footer container">
+            <div class="row">
+                <div class="col">
+                    <a class="h-logo-grp2 navbar-brand" href="#">
+                        <img class="h-logo2" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top"
+                            alt="">
+                        <span class="footer-logo">Stuliday</span>
+                    </a>
+                    <div class="footer-soc">
+                        <h3 class="footer-t2">RESEAUX SOCIAUX</i>
+                    </div>
+                    <i class="footer-social footer-ico fab fa-facebook-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-twitter-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-linkedin fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-google-plus-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-youtube-square fa-3x"></i>
+                    <i class="footer-social-last footer-ico fab fa-instagram fa-3x"></i>
+                </div>
+                <div class="col">
+                    <h3 class="footer-t1">Application mobile <i class="fab fa-android"></i>
+                        <i class="fab fa-app-store-ios"></i></h3>
+                    <form class="form-block">
+                        <div class="form-footer-1">
+                            <input type="password" class="form-footer-2 form-control" id="inputPassword2" placeholder="Téléphone">
+                        </div>
+                        <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                    </form>
+                    <div class="form-footer-grp2">
+                        <h3 class="footer-t2">Abonnement Newsletter <i class="fas fa-envelope"></i></h3>
+                        <form class="form-block">
+                            <div class="form-footer-1">
+                                <input type="password" class="form-footer-2 form-control" id="inputPassword2"
+                                    placeholder="Mail">
+                            </div>
+                            <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-c3 col">
+                    <h3 class="footer-t3">Contact <i class="fas fa-user"></i></h3>
+                    <div class="footer-con">
+                        <div class="footer-about row">
+                            <div class="footer-links col">
+                                <a href="about-us.html">Qui sommes nous ?</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="recrut.html">Recrutement</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="#">Conditions&Termes</a>
+                            </div>
+                        </div>
+                        <p><i class="fas fa-map-marked-alt"></i> <span class="bold">Adresse :</span> 45 rue Thiac 33000
+                            BORDEAUX</p>
+                        <p><i class="fas fa-phone"></i> <span class="bold">Tel :</span> 06 17 39 45 41</p>
+                        <p><i class="fas fa-envelope"></i> <span class="bold">Mail :</span> remycha@msn.com</p>
+                        <p>© 2019 Stuliday. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/FOOTER-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#post-annonce-create-account').click(function () {
+        });
+
+    </script>
+</body>
+
+</html>

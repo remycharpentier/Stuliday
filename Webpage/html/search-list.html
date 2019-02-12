@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Remy Charpentier">
+    <meta name="description" content="Stuliday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stuliday</title>
+    <!--NORMALIZE-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!--/NORMALIZE-->
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <!--/FONT AWESOME-->
+    <!--FRAMEWORK-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!--/FRAMEWORK-->
+    <!--STYLE CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--/STYLE CSS-->
+</head>
+
+<body class="bg-host-annonce">
+    <!--HEADER-->
+    <header id="header header-search">
+        <nav class="h-nav navbar navbar-light ">
+            <a class="h-logo-grp navbar-brand" href="index-connected.html">
+                <img class="h-logo" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top" alt="">
+                <span>Stuliday</span>
+            </a>
+            <div class="navbar-grp">
+                <!--BOUTON-HOST-->
+                <a class="btn new-acc-sub-connected" href="host-annonce.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-envelope"></i> Poster une annonce</span>
+                    </button>
+                </a>
+                <!--BOUTON-FAVORIS-->
+                <a class="btn new-acc-sub-connected" href="fav-list.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-heart"></i> Favoris</span>
+                    </button>
+                </a>
+                <!--BOUTON-MES-NOTIFS-->
+                <a class="btn new-acc-sub-connected" href="notif.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-bell"></i> Notifications</span>
+                    </button>
+                </a>
+                <!--BOUTON-MY-PROFILE-->
+                <a class="btn new-acc-sub-connected" href="my-profile.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-user"></i> Mon profil</span>
+                    </button>
+                </a>
+                <!--BOUTON-CONTACT-->
+                <a class="new-acc-sub btn" href="about-us.html" role="button"><span><i class="fas fa-users"></i>
+                        Contacter</span></a>
+            </div>
+        </nav>
+    </header>
+    <!--/HEADER-->
+    <!--SECTION-1-SEARCH-BAR-->
+    <div class="search-list-cont container">
+        <h2 class="publier-t1">Voici les résultats de votre recherche. Vous pouvez la modifier à tout moment.</h2>
+        <form class="search-list-form">
+            <div class="row">
+                <div class="col-3">
+                    <input type="text" class="form-control" placeholder="Où désirez vous aller ?">
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Début">
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Fin">
+                </div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Voyageurs">
+                </div>
+                <!--BOUTON-CRITERES-->
+                <div class="col-2">
+                    <button type="button" class="s1-cri btn" data-toggle="modal" data-target="#modal-criteres"
+                        data-toggle="tooltip" data-placement="top" title="Choississez vos critères pour affiner votre recherche">Critères</button>
+                    <!--MODAL-CRITERES-->
+                    <div class="modal fade" id="modal-criteres" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Choisissez vos critères</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" class="cross">&times;</span>
+                                </div>
+                                <div class="modal-body modal-criteres">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h3>Activités</h3>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Ski</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Surf</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Randonée</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Plongée</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Musée</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Balade vélo</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Restaurant</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Spa</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h3>Affinités / Goûts</h3>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Sportif</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Montagne</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Fête</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Rap</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Rock</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Jeux Vidéo</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Lecture</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Plage</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <h3>Pays</h3>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>France</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Espagne</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Angleterre</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Portugal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Italie</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Irlande</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Belgique</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                    <span>Allemagne</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input class="form-control form-control-sm index-modal-crit" id="modal-criteres"
+                                        type="text" placeholder="Ajoutez vos propres critères">
+                                    <div class="index-modal-crit-btn2 btn btn-success btn-sm" data-toggle="tooltip"
+                                        data-placement="top" title="Ajouter une activité pour permettre aux utilisateurs de mieux trouver votre annonce"><i
+                                            class="fas fa-plus"></i></div>
+                                    <div class="index-modal-crit-btn2 btn host-annonce-btn-eye btn-sm" data-toggle="tooltip"
+                                        data-placement="top" title="Voir et gérer vos activités ajoutées"><i class="fas fa-eye"></i></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" class="close" data-dismiss="modal"
+                                        aria-label="Close">Accepter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--BOUTON-LOUPE-->
+                <a class="btn s1-src-loupe" href="search-list.html" role="button" data-toggle="tooltip" data-placement="top"
+                    title="Lancer votre recherche"><i class="s1-src-loupe-2 fas fa-search"></i></a>
+            </div>
+        </form>
+        <i class="search-i1 fas fa-map-marker-alt"></i>
+        <i class="search-i2 far fa-calendar-alt"></i>
+        <i class="search-i3 far fa-calendar-alt"></i>
+        <i class="search-i4 fas fa-users"></i>
+        <i class="search-i5 fas fa-plus"></i>
+        <!--/SECTION-1-SEARCH-BAR-->
+        <div class="d-flex justify-content-end">
+            <div class="btn-group dropright">
+                <button type="button" class="btn search-btn-trier dropdown-toggle search-drop-btn" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span>Trier</span>
+                </button>
+                <div class="dropdown-menu search-list-drop-menu">
+                    <p>Prix croissant</p>
+                    <p>Prix décroissant</p>
+                    <p>Plus récent</p>
+                    <p>Moins récent</p>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-1-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm" data-toggle="tooltip"
+                        data-placement="top" title="Ajouter cette annonce à vos favoris"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="annonce.html">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-2-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet2.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-3-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet3.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-4-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet4.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-5-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet5.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-6-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet6.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-7-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet7.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--BOX-ANNONCE-8-->
+        <div class="box-annonce">
+            <div class="row">
+                <div class="col-3">
+                    <img src="..//img/search-chalet8.jpg" alt="">
+                    <button type="button" class="search-fav btn btn-primary btn-sm"><i class="far fa-heart"></i></button>
+                </div>
+                <div class="col-4">
+                    <a href="">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde dicta eligendi, velit possimus eaque saepe.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--PAGINATION-->
+        <nav aria-label="...">
+            <ul class="search-pagination pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--FOOTER-->
+    <div class="wall-footer-host-annonce">
+        <div class="bg-footer container">
+            <div class="row">
+                <div class="col">
+                    <a class="h-logo-grp2 navbar-brand" href="#">
+                        <img class="h-logo2" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top"
+                            alt="">
+                        <span class="footer-logo">Stuliday</span>
+                    </a>
+                    <div class="footer-soc">
+                        <h3 class="footer-t2">RESEAUX SOCIAUX</i>
+                    </div>
+                    <i class="footer-social footer-ico fab fa-facebook-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-twitter-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-linkedin fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-google-plus-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-youtube-square fa-3x"></i>
+                    <i class="footer-social-last footer-ico fab fa-instagram fa-3x"></i>
+                </div>
+                <div class="col">
+                    <h3 class="footer-t1">Application mobile <i class="fab fa-android"></i>
+                        <i class="fab fa-app-store-ios"></i></h3>
+                    <form class="form-block">
+                        <div class="form-footer-1">
+                            <input type="password" class="form-footer-2 form-control" id="inputPassword2" placeholder="Téléphone">
+                        </div>
+                        <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                    </form>
+                    <div class="form-footer-grp2">
+                        <h3 class="footer-t2">Abonnement Newsletter <i class="fas fa-envelope"></i></h3>
+                        <form class="form-block">
+                            <div class="form-footer-1">
+                                <input type="password" class="form-footer-2 form-control" id="inputPassword2"
+                                    placeholder="Mail">
+                            </div>
+                            <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-c3 col">
+                    <h3 class="footer-t3">Contact <i class="fas fa-user"></i></h3>
+                    <div class="footer-con">
+                        <div class="footer-about row">
+                            <div class="footer-links col">
+                                <a href="about-us.html">Qui sommes nous ?</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="recrut.html">Recrutement</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="#">Conditions&Termes</a>
+                            </div>
+                        </div>
+                        <p><i class="fas fa-map-marked-alt"></i> <span class="bold">Adresse :</span> 45 rue Thiac 33000
+                            BORDEAUX</p>
+                        <p><i class="fas fa-phone"></i> <span class="bold">Tel :</span> 06 17 39 45 41</p>
+                        <p><i class="fas fa-envelope"></i> <span class="bold">Mail :</span> remycha@msn.com</p>
+                        <p>© 2019 Stuliday. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/FOOTER-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#post-annonce-create-account').click(function () {
+        });
+
+    </script>
+</body>
+
+</html>

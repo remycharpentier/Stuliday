@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Remy Charpentier">
+    <meta name="description" content="Stuliday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stuliday</title>
+    <!--NORMALIZE-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!--/NORMALIZE-->
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--/FONT AWESOME-->
+    <!--FRAMEWORK-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!--/FRAMEWORK-->
+    <!--STYLE CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--/STYLE CSS-->
+</head>
+
+<body class="bg-host-annonce">
+    <!--HEADER-->
+    <header id="header header-search">
+        <nav class="h-nav navbar navbar-light ">
+            <a class="h-logo-grp navbar-brand" href="index-connected.html">
+                <img class="h-logo" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top" alt="">
+                <span>Stuliday</span>
+            </a>
+            <div class="navbar-grp">
+                <!--BOUTON-HOST-->
+                <a class="btn new-acc-sub-connected" href="host-annonce.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-envelope"></i> Poster une annonce</span>
+                    </button>
+                </a>
+                <!--BOUTON-FAVORIS-->
+                <a class="btn new-acc-sub-connected" href="fav-list.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-heart"></i> Favoris</span>
+                    </button>
+                </a>
+                <!--BOUTON-MES-NOTIFS-->
+                <a class="btn new-acc-sub-connected" href="notif.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-bell"></i> Notifications</span>
+                    </button>
+                </a>
+                <!--BOUTON-MY-PROFILE-->
+                <a class="btn new-acc-sub-connected" href="my-profile.html" role="button"><button type="button" class="new-acc-sub btn">
+                        <span><i class="fas fa-user"></i> Mon profil</span>
+                    </button>
+                </a>
+                <!--BOUTON-CONTACT-->
+                <a class="new-acc-sub btn" href="about-us.html" role="button"><span><i class="fas fa-users"></i>
+                        Contacter</span></a>
+            </div>
+        </nav>
+    </header>
+    <!--/HEADER-->
+    <!--SECTION-1-->
+    <section>
+        <div class="container annonce-cont">
+            <!--PHOTOS-->
+            <div class="row annonce-row1">
+                <div class="col-6">
+                    <img src="..//img/chalet-p1a.jpg" alt="" class="annonce-img1">
+                </div>
+                <div class="col-6 annonce-col-grp">
+                    <div class="row annonce-row1">
+                        <div class="col-6 annonce-col1">
+                            <img src="..//img/chalet-p4b.jpg" alt="" class="annonce-img1">
+                        </div>
+                        <div class="col-6 annonce-col1">
+                            <img src="..//img/chalet-p6b.jpg" alt="" class="annonce-img1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 annonce-col1">
+                            <img src="..//img/chalet-p8b.jpg" alt="" class="annonce-img1">
+                        </div>
+                        <div class="col-6 annonce-col1">
+                            <img src="..//img/chalet-p10b.jpg" alt="" class="annonce-img1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="annonce-btn-grp">
+                <button class="btn annonce-btn-voirplus btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="Voir plus de photos"><i class="far fa-eye"></i></button>
+                <button class="btn btn-primary btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="Ajouter cette annonce dans vos favoris"><i class="far fa-heart"></i></button>              
+                <button class="btn btn-primary btn-sm annonce-share" type="submit" data-toggle="tooltip" data-placement="top" title="Partager cette annonce"><img src="..//img/share-alt-solid.svg" alt=""></button>
+            </div>
+            <!--MINI-DESCRIPTIF-->
+            <div class="row annonce-mini-descr">
+                <div class="col-6">
+                    <a href="annonce.html">
+                        <h3>Grand chalet au pied des montagnes</h3>
+                    </a>
+                    <h4>Les Deux Alpes - FRANCE</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde dicta eligendi, velit possimus
+                        eaque saepe tenetur? Hic cum quos sapiente neque expedita quod corporis reiciendis quisquam
+                        aliquam omnis numquam velit, voluptates facilis molestias. Hic cum quos sapiente neque expedita
+                        quod corporis reiciendis. Unde dicta eligendi, velit. Hic cum quos sapiente neque expedita.
+                        Unde
+                        dicta eligendi, velit possimus eaque saepe. Unde dicta eligendi, velit possimus eaque saepe
+                        tenetur? Hic cum quos sapiente neque. Unde dicta eligendi, velit. Lorem ipsum dolor, sit amet
+                        consectetur.</p>
+                </div>
+                <div class="users-list col-2">
+                    <h3>Participants</h3>
+                    <div class="s3-t2 annonce-s3-t2">
+                        <i class="search-crown1 fas fa-crown"></i>
+                        <i class="search-car1 fas fa-car-side"></i>
+                        <img src="../img/member-1.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-3.png" width="40" height="40" alt="">
+                        <img src="../img/member-4.png" width="40" height="40" alt="">
+                        <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                        <img src="../img/member-6.png" width="40" height="40" alt="">
+                        <img src="../img/member-7.png" width="40" height="40" alt="">
+                        <img src="../img/add.png" width="40" height="40" alt="">
+                        <img src="../img/next.png" width="40" height="40" alt="">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h3>Infos</h3>
+                    <div class="search-grp-info annonce-mini-info">
+                        <div class="row">
+                            <div class="col">
+                                <p>Type</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">Appartement</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Superficie</p>
+                            </div>
+                            <div class="col-4 search-ali-col">
+                                <p class="search-ali">100 m²</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Chambres</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Salles de bain</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">2</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <p>Places restantes</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="search-ali">4</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Places max</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">10</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Prix</p>
+                            </div>
+                            <div class="col">
+                                <p class="search-ali">33€/nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--DESCRIPTION-->
+            <div class="row">
+                <div class="col-6">
+                    <h3 class="annonce-descr">Description du logement</h3>
+                </div>
+                <div class="col-6">
+                    <h3 class="annonce-descr">Localisation</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-c1 col-2">
+                    <!--GROUPE-1-->
+                    <div class="grp-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Appartement</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Maison</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Villa</p>
+                            </label>
+                        </div>
+                    </div>
+                    <!--GROUPE-2-->
+                    <div class="grp-2 annonce-grp1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Jardin / Terasse</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Piscine</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Spa</p>
+                            </label>
+                        </div>
+                    </div>
+                    <!--GROUPE-3-->
+                    <div class="grp-3 annonce-grp2 form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            <p>Accès handicapé</p>
+                        </label>
+                    </div>
+                    <!--GROUPE-4-->
+                    <div class="grp-4 annonce-grp3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Climatisation</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Internet</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>TV</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Cuisine</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Lave-linge</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Sèche-linge</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Douche</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Baignoire</p>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                            <label class="form-check-label" for="defaultCheck1">
+                                <p>Sèche-cheveux</p>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <!--GROUPE-5-->
+                    <div class="grp-5 form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlSelect1">Nombre de voyageurs max</label>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control-sm" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlSelect1">Nombre de chambres</label>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control-sm" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlSelect1">Nombre de lits simple</label>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control-sm" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlSelect1">Nombre de lits double</label>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control-sm" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlSelect1">Nombre de Salles de bain</label>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control-sm" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="exampleFormControlSelect1">Superficie</label>
+                            </div>
+                            <div class="col-2">
+                                <input class="sup form-control-sm" type="text" placeholder="m²">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row annonce-grp4">
+                        <div class="col-6">
+                            <!--AUTORISER-->
+                            <div class="grp-aut">
+                                <p class="publier-t4 annonce-autorisation">Autorisations</p>
+                                <div class="grp-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <p>Membre inconnu</p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <p>Fumeur</p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <p>Animaux</p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <p>Enfants</p>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <p>Fêtes</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <!--DISPONIBILTES-->
+                            <div class="grp-aut">
+                                <p class="publier-t4 annonce-autorisation">Dates du séjour</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="grp-6 annonce-date-c1">
+                                            <div class="annonce-l1">
+                                                <p>Du</p>
+                                                <p>01/02/2019</p>
+                                            </div>
+                                            <div class="annonce-l2">
+                                                <p>Au</p>
+                                                <p>04/02/2019</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="grp-6 annonce-cal1">
+                                            <i class="fas fa-calendar-alt fa-3x" data-toggle="tooltip" data-placement="top" title="Consulter les disponiblités"></i>
+                                        </div>
+                                        <div class="grp-6 annonce-cal2">
+                                            <i class="fas fa-calendar-alt fa-3x" data-toggle="tooltip" data-placement="top" title="Consulter les disponibilités"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 annonce-form-c3">
+                    <span>Adresse: 128 Allées du Bonhomme de neige 38860 Les Deux Alpes </span>
+                    <button class="btn annonce-btn-activity btn-sm" type="submit" data-toggle="tooltip" data-placement="top" title="Voir les activités proches"><i class="fas fa-eye"></i> Activités
+                        proches</button>
+                    <iframe class="annonce-maps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11282.432772765798!2d6.126188077822071!3d45.01257783294365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1548060086177"
+                        width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <a href="#" class="annonce-cancel">Voir les conditions d'annulation</a>
+            <div>
+                <a class="btn annonce-btn-resa" href="#" role="button">Réserver cette location</a>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <div class="wall-footer-host-annonce">
+        <div class="bg-footer container">
+            <div class="row">
+                <div class="col">
+                    <a class="h-logo-grp2 navbar-brand" href="#">
+                        <img class="h-logo2" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top"
+                            alt="">
+                        <span class="footer-logo">Stuliday</span>
+                    </a>
+                    <div class="footer-soc">
+                        <h3 class="footer-t2">RESEAUX SOCIAUX</i>
+                    </div>
+                    <i class="footer-social footer-ico fab fa-facebook-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-twitter-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-linkedin fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-google-plus-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-youtube-square fa-3x"></i>
+                    <i class="footer-social-last footer-ico fab fa-instagram fa-3x"></i>
+                </div>
+                <div class="col">
+                    <h3 class="footer-t1">Application mobile <i class="fab fa-android"></i>
+                        <i class="fab fa-app-store-ios"></i></h3>
+                    <form class="form-block">
+                        <div class="form-footer-1">
+                            <input type="password" class="form-footer-2 form-control" id="inputPassword2" placeholder="Téléphone">
+                        </div>
+                        <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                    </form>
+                    <div class="form-footer-grp2">
+                        <h3 class="footer-t2">Abonnement Newsletter <i class="fas fa-envelope"></i></h3>
+                        <form class="form-block">
+                            <div class="form-footer-1">
+                                <input type="password" class="form-footer-2 form-control" id="inputPassword2"
+                                    placeholder="Mail">
+                            </div>
+                            <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-c3 col">
+                    <h3 class="footer-t3">Contact <i class="fas fa-user"></i></h3>
+                    <div class="footer-con">
+                        <div class="footer-about row">
+                            <div class="footer-links col">
+                                <a href="about-us.html">Qui sommes nous ?</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="recrut.html">Recrutement</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="#">Conditions&Termes</a>
+                            </div>
+                        </div>
+                        <p><i class="fas fa-map-marked-alt"></i> <span class="bold">Adresse :</span> 45 rue Thiac 33000
+                            BORDEAUX</p>
+                        <p><i class="fas fa-phone"></i> <span class="bold">Tel :</span> 06 17 39 45 41</p>
+                        <p><i class="fas fa-envelope"></i> <span class="bold">Mail :</span> remycha@msn.com</p>
+                        <p>© 2019 Stuliday. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/FOOTER-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script>
+        $('#post-annonce-create-account').click(function () {
+        });
+
+    </script>
+</body>
+
+</html>
