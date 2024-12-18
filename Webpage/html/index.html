@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Remy Charpentier">
+    <meta name="description" content="Stuliday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stuliday</title>
+    <!--NORMALIZE-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!--/NORMALIZE-->
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <!--/FONT AWESOME-->
+    <!--FRAMEWORK-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!--/FRAMEWORK-->
+    <!--STYLE CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--/STYLE CSS-->
+</head>
+
+<body id="index-wall">
+    <!--HEADER-->
+    <header id="header">
+        <nav class="h-nav navbar navbar-light ">
+            <a class="h-logo-grp navbar-brand" href="#">
+                <img class="h-logo" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top" alt="">
+                <span>Stuliday</span>
+            </a>
+            <div class="navbar-grp">
+                <!--BOUTON-HOST-->
+                <button type="button" class="new-acc-sub btn" data-toggle="modal" data-target="#host">
+                    <span><i class="fas fa-envelope"></i> Poster une annonce</span>
+                </button>
+                <!--MODAL-HOST-->
+                <div class="modal fade" id="host" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Poster une annonce</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="cross">&times;</span>
+                                </button>
+                            </div>
+                            <div class="host-modal-body modal-body">
+                                <p class="host-modal-t1">Vous devez posséder un compte pour créer une annonce.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="post-annonce-create-account" data-dismiss="modal" data-toggle="modal"
+                                    data-target="#subscribe" class="btn btn-primary">Créer un compte</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--BOUTON-SUBSCRIBE-->
+                <button type="button" class="new-acc-sub btn" data-toggle="modal" data-target="#subscribe">
+                    <span><i class="fas fa-pencil-alt"></i> S'inscrire</span>
+                </button>
+                <!--MODAL-SUBSCRIBE-->
+                <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Créez votre compte</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="cross">&times;</span>
+                                </button>
+                            </div>
+                            <div class="new-acc-modal">
+                                <form>
+                                    <p class="new-acc-t1">Via</p>
+                                    <button type="button" class="new-acc-btn1 btn btn-block" data-dismiss="modal"
+                                        data-toggle="modal" data-target="#congrats"><i class="fa-2x fab fa-facebook-f"></i>
+                                        Facebook</button>
+                                    <button type="button" class="new-acc-btn2 btn btn-block" data-dismiss="modal"
+                                        data-toggle="modal" data-target="#congrats"><img src="..//img/google.svg" alt=""
+                                            class="google"></i> Google</button>
+                                    <p class="new-acc-t2">Ou</p>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Entrez votre mot de passe">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Confirmez votre mot de passe">
+                                    </div>
+                                    <div class="new-acc-check form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="new-acc-rem form-check-label" for="defaultCheck1">
+                                            <p class="new-acc-t3">Se rappeler de moi</p>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="congratz-new-acc" data-dismiss="modal" data-toggle="modal"
+                                    data-target="#congrats" class="btn btn-primary">Valider</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--MODAL-CONGRAT-->
+                <div class="modal fade" id="congrats" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"><img src="..//img/checked.svg" alt=""
+                                        class="checked1"> Félicitations !</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="cross">&times;</span>
+                                </button>
+                            </div>
+                            <div class="host-modal-body modal-body">
+                                <p class="host-modal-t1">Vous venez de créer votre compte STULIDAY.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn-modal-new-profile1 btn-primary" href="new-profile.html"><button type="button"
+                                        class="btn btn-modal-new-profile2" id="post-annonce-create-account">Créer
+                                        mon profil</button></a>
+                                <button type="button" id="post-annonce-create-account" data-toggle="modal" data-target="#"
+                                    data-dismiss="modal" class="btn btn-secondary">Plus tard</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--BOUTON-LOGIN-->
+                <button type="button" class="login btn" data-toggle="modal" data-target="#login">
+                    <span><i class="fas fa-user"></i> Se connecter</span>
+                </button>
+                <!--MODAL-LOGIN-->
+                <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content modal-connect-index">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Connectez-vous à votre compte</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="cross">&times;</span>
+                                </button>
+                            </div>
+                            <div class="login-modal">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Entrez votre adresse email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Entrez votre mot de passe">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="button" id="congratz-new-acc" data-dismiss="modal" data-toggle="modal"
+                                            data-target="#congrats2" class="btn btn-primary btn-block">Valider</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="new-acc-t2">Ou</p>
+                                </div>
+                            </div>
+                            <div class="login-modal">
+                                <div class="form-group">
+                                    <button type="button" id="congratz-new-acc" data-dismiss="modal" data-toggle="modal"
+                                        data-target="#congrats2" class="btn btn-login btn-block">Continuer en tant que
+                                        Remy</button>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" id="congratz-new-acc" class="btn btn-login btn-block">Continuer
+                                        en tant que
+                                        Christopher</button>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" id="congratz-new-acc" class="btn btn-login btn-block">Continuer
+                                        en tant que
+                                        Paloma</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--MODAL-CONGRAT2-->
+                <div class="modal fade" id="congrats2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"><img src="..//img/checked.svg" alt=""
+                                        class="checked1"> Félicitations !</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="cross">&times;</span>
+                                </button>
+                            </div>
+                            <div class="host-modal-body modal-body">
+                                <p class="host-modal-t1">Vous êtes désormais connecté à votre compte STULIDAY !</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn-modal-new-profile1 btn-primary" href="index-connected.html"><button type="button"
+                                        class="btn btn-modal-new-profile2" id="post-annonce-create-account">Continuer</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--BOUTON-CONTACT-->
+                <a class="new-acc-sub btn" href="about-us.html" role="button"><span><i class="fas fa-users"></i>
+                        Contacter</span></a>
+            </div>
+        </nav>
+    </header>
+    <!--/HEADER-->
+    <!--SECTION-1-SEARCH-BAR-->
+    <section>
+        <div class="container s1-bg">
+            <p class="s1-t1">Bienvenue!</p>
+            <p class="s1-t2a">Créez votre <strong>annonce</strong> de <strong>location</strong> de <strong>vacances</strong>
+                ou</p>
+            <p class="s1-t2b">Recherchez la, parmis d'<strong>autres voyageurs</strong>, selon vos critères :</p>
+            <form class="s1-form">
+                <div class="row">
+                    <div class="col-3">
+                        <input type="text" class="form-control" placeholder="Où désirez vous aller ?">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="Début">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="Fin">
+                    </div>
+                    <div class="col-2">
+                        <input type="text" class="form-control" placeholder="Voyageurs">
+                    </div>
+                    <!--BOUTON-CRITERES-->
+                    <div class="col-2">
+                        <button type="button" class="s1-cri btn" data-toggle="tooltip" data-placement="top" title="Choississez vos critères pour affiner votre recherche">Critères</button>
+                    </div>
+                    <!--BOUTON-LOUPE-->
+                    <a class="btn s1-src-loupe" href="search-list.html" role="button" data-toggle="tooltip"
+                        data-placement="top" title="Lancer votre recherche"><i class="s1-src-loupe-2 fas fa-search"></i></a>
+                </div>
+            </form>
+            <i class="s1-i1 fas fa-map-marker-alt"></i>
+            <i class="s1-i2 far fa-calendar-alt"></i>
+            <i class="s1-i3 far fa-calendar-alt"></i>
+            <i class="s1-i4 fas fa-users"></i>
+            <i class="s1-i5 fas fa-plus"></i>
+        </div>
+    </section>
+    <!--/SECTION-1-SEARCH-BAR-->
+    <!--SECTION-2-SUGGESTIONS-->
+    <section>
+        <div class="container s2-bg">
+            <p class="s2-t1">Découvrez nos <strong>suggestions</strong> plus bas triées par :</p>
+            <img src="../img/choix.jpg" alt="">
+        </div>
+        <div class="container s2-bgb">
+            <div class="s2-grp">
+                <div class="row">
+                    <div class="col">
+                        <a class="s2-t2" href="#activites" data-toggle="tooltip" data-placement="top" title="Voir ces suggestions">Activités</a>
+                    </div>
+                    <div class="col">
+                        <a class="s2-t2" href="#affinites" data-toggle="tooltip" data-placement="top" title="Voir ces suggestions">Affinités</a>
+                    </div>
+                    <div class="col">
+                        <a class="s2-t2" href="#pays" data-toggle="tooltip" data-placement="top" title="Voir ces suggestions">Pays</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/SECTION-2-SUGGESTIONS-->
+    <!--SECTION-3-FILTRE-ACTIVITES-->
+    <section>
+        <div class="container s3-bg" id="activites">
+            <div class="s3-c1">
+                <img src="../img/activites.jpg" alt="">
+                <div class="s3-grp">
+                    <p class="s3-t0">Voici nos suggestions par <span style="color: orange" class="s3-t0">activités</span>
+                        proches de la location.
+                        <a class="s3-btn3 nav-link" href="#header" data-toggle="tooltip" data-placement="top" title="Remonter d'un niveau"><i
+                                class="fas fa-arrow-up fa-2x"></i></a>
+                        <a class="s3-btn3 nav-link" href="#affinites" data-toggle="tooltip" data-placement="top" title="Descendre d'un niveau"><i
+                                class="fas fa-arrow-down fa-2x"></i></a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn" data-toggle="modal" data-toggle="tooltip" data-placement="top"
+                            title="Ajouter des activités" data-target="#exampleModal1" style="font-size: 1.3rem;">
+                            <i class="s3-btn3c fas fa-pencil-alt"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ajoutez des activités proches de
+                                            la location</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" class="cross">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control index-connected-modal-activities1" type="text"
+                                            placeholder="Activité 1 (exemple : ski, restaurant, musée)">
+                                        <input class="form-control index-connected-modal-activities2" type="text"
+                                            placeholder="Activité 2 (facultatif)">
+                                        <input class="form-control" type="text" placeholder="Activité 3 (facultatif)">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" data-toggle="modal" data-target="#" type="button"
+                                            class="btn btn-success">Accepter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="s3-card row">
+                <!--CARD-1-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/chalet.jpeg" class="card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Grand chalet au pied des montagnes</p>
+                            <p class="s3-t13 card-title">Les Deux Alpes - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown" data-toggle="tooltip" data-placement="top" title="Hôte de l'annonce"></i>
+                                <i class="s3-car1 fas fa-car-side" data-toggle="tooltip" data-placement="top" title="Ce membre propose son trajet en co-voiturage à partir de Bordeaux"></i>
+                                <i class="s3-check1 fas fa-check-circle" data-toggle="tooltip" data-placement="top"
+                                    title="L'identité de ce membre à été vérifié. Elle est authentique"></i>
+                                <a href="user-profile.html"><img src="../img/member-1.png" width="40" height="40" alt=""
+                                        data-toggle="tooltip" data-placement="top" title="Cliquez pour voir le profil de cet utilisateur"></a>
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="" data-toggle="tooltip"
+                                    data-placement="top" title="Cet utilisateur n'a pas créer de profil">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/member-4.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-6.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="" data-toggle="tooltip"
+                                    data-placement="top" title="Cette place est disponible">
+                                <img src="../img/next.png" width="40" height="40" alt="" data-toggle="tooltip"
+                                    data-placement="top" title="Voir les autres participants">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">6 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Randonée</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Snowboard</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Ski</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 01/02/2019 au 04/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">33€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-2-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/beach.jpg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Maison au bord de la plage</p>
+                            <p class="s3-t13 card-title">Cap Ferret - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <img src="../img/member-2.png" width="40" height="40" alt="">
+                                <img src="../img/member-5.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">1 places restante</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Surf</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Plongée</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Wakeboard</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 04/02/2019 au 06/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">31€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-3-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/centreville.jpg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Appartement en plein centre ville</p>
+                            <p class="s3-t13 card-title">Marseille - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car3 fas fa-car-side"></i>
+                                <img src="../img/member-7.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">3 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">3 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t7 card-text">Musée</p>
+                                </div>
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t8 card-text">Balade vélo</p>
+                                </div>
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t9 card-text">Théâtre</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 18/02/2019 au 22/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">29€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-4-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/appt-1.jpeg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Appartement proche de toutes comodités</p>
+                            <p class="s3-t13 card-title">Lyon - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car4-1 fas fa-car-side"></i>
+                                <i class="s3-car4-2 fas fa-car-side"></i>
+                                <i class="s3-car4-3 fas fa-car-side"></i>
+                                <img src="../img/member-1.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/member-4.png" width="40" height="40" alt="">
+                                <img src="../img/member-8.png" width="40" height="40" alt="">
+                                <img src="../img/member-6.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/next.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">4 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Restaurant </p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Spa</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Yoga</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 20/02/2019 au 25/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">30€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/SECTION-3-FILTRE-ACTIVITES-->
+    <!--SECTION-4-FILTRE-AFFINITES-->
+    <section>
+        <div class="container s4-bg" id="affinites">
+            <div class="s3-c1">
+                <img src="../img/affinites.jpeg" alt="">
+                <div class="s4-grp">
+                    <p class="s3-t0">Voici nos suggestions par <span style="color: orange" class="s3-t0">affinités</span>
+                        des participants.
+                        <a class="s3-btn3 nav-link" href="#activites" data-toggle="tooltip" data-placement="top" title="Remonter d'un niveau"><i
+                                class="fas fa-arrow-up fa-2x"></i></a>
+                        <a class="s3-btn3 nav-link" href="#pays" data-toggle="tooltip" data-placement="top" title="Descendre d'un niveau"><i
+                                class="fas fa-arrow-down fa-2x"></i></a>
+                        <a class="s3-btn3 nav-link" href="#header" data-toggle="tooltip" data-placement="top" title="Remonter tout en haut"><i
+                                class="fas fa-home fa-2x"></i></a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn" data-toggle="modal" data-toggle="tooltip" data-placement="top"
+                            title="Ajouter des thèmes" data-target="#exampleModal2" style="font-size: 1.3rem;">
+                            <i class="s4-btn3c fas fa-pencil-alt"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ajoutez des thèmes ou des choses
+                                            que vous pourriez aimer</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" class="cross">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control index-connected-modal-activities1" type="text"
+                                            placeholder="Thème 1 (exemple : fête, foot, rap)">
+                                        <input class="form-control index-connected-modal-activities2" type="text"
+                                            placeholder="Thème 2 (facultatif)">
+                                        <input class="form-control" type="text" placeholder="Thème 3 (facultatif)">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" data-toggle="modal" data-target="#" type="button"
+                                            class="btn btn-success">Accepter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="s3-card row">
+                <!--CARD-1-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/chalet.jpeg" class="card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Grand chalet au pied des montagnes</p>
+                            <p class="s3-t13 card-title">Les Deux Alpes - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car1 fas fa-car-side"></i>
+                                <img src="../img/member-1.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/member-4.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-6.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/next.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">6 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Randonée</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Snowboard</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Ski</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 01/02/2019 au 04/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">33€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-2-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/beach.jpg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Maison au bord de la plage</p>
+                            <p class="s3-t13 card-title">Cap Ferret - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <img src="../img/member-2.png" width="40" height="40" alt="">
+                                <img src="../img/member-5.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">1 places restante</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Surf</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Plongée</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Wakeboard</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 04/02/2019 au 06/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">31€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-3-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/centreville.jpg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Appartement en plein centre ville</p>
+                            <p class="s3-t13 card-title">Marseille - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car3 fas fa-car-side"></i>
+                                <img src="../img/member-7.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">3 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">3 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t7 card-text">Musée</p>
+                                </div>
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t8 card-text">Balade vélo</p>
+                                </div>
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t9 card-text">Théâtre</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 18/02/2019 au 22/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">29€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-4-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/appt-1.jpeg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Appartement proche de toutes comodités</p>
+                            <p class="s3-t13 card-title">Lyon - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car4-1 fas fa-car-side"></i>
+                                <i class="s3-car4-2 fas fa-car-side"></i>
+                                <i class="s3-car4-3 fas fa-car-side"></i>
+                                <img src="../img/member-1.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/member-4.png" width="40" height="40" alt="">
+                                <img src="../img/member-8.png" width="40" height="40" alt="">
+                                <img src="../img/member-6.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/next.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">4 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Restaurant </p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Spa</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Yoga</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 20/02/2019 au 25/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">30€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/SECTION-4-FILTRE-AFFINITES-->
+    <!--SECTION-5-FILTRE-PAYS-->
+    <section>
+        <div class="container s5-bg" id="pays">
+            <div class="s3-c1">
+                <img src="../img/pays.jpg" alt="">
+                <div class="s5-grp">
+                    <p class="s3-t0">Voici nos suggestions par <span style="color: orange" class="s3-t0">pays</span> à
+                        l'étranger.
+                        <a class="s3-btn3 nav-link" href="#affinites" data-toggle="tooltip" data-placement="top" title="Remonter d'un niveau"><i
+                                class="fas fa-arrow-up fa-2x"></i></a>
+                        <a class="s3-btn3 nav-link" href="#header" data-toggle="tooltip" data-placement="top" title="Remonter tout en haut"><i
+                                class="fas fa-home fa-2x"></i></a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn" data-toggle="modal" data-toggle="tooltip" data-placement="top"
+                            title="Ajouter un pays" data-target="#exampleModal3" style="font-size: 1.3rem;">
+                            <i class="s5-btn3c fas fa-pencil-alt"></i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ajoutez un pays ou vous voudriez
+                                            aller</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true" class="cross">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input class="form-control index-connected-modal-activities1" type="text"
+                                            placeholder="Pays (exemple : Espagne, Etats-Unis, Japon)">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button data-dismiss="modal" data-toggle="modal" data-target="#" type="button"
+                                            class="btn btn-success">Accepter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="s3-card row">
+                <!--CARD-1-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/chalet.jpeg" class="card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Grand chalet au pied des montagnes</p>
+                            <p class="s3-t13 card-title">Les Deux Alpes - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car1 fas fa-car-side"></i>
+                                <img src="../img/member-1.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/member-4.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-6.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/next.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">6 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Randonée</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Snowboard</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Ski</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 01/02/2019 au 04/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">33€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-2-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/beach.jpg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Maison au bord de la plage</p>
+                            <p class="s3-t13 card-title">Cap Ferret - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <img src="../img/member-2.png" width="40" height="40" alt="">
+                                <img src="../img/member-5.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">1 places restante</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Surf</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Plongée</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Wakeboard</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 04/02/2019 au 06/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">31€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-3-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/centreville.jpg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Appartement en plein centre ville</p>
+                            <p class="s3-t13 card-title">Marseille - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car3 fas fa-car-side"></i>
+                                <img src="../img/member-7.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">3 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">3 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t7 card-text">Musée</p>
+                                </div>
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t8 card-text">Balade vélo</p>
+                                </div>
+                                <div class="s3-col-grp col">
+                                    <p class="s3-t9 card-text">Théâtre</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 18/02/2019 au 22/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">29€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD-4-->
+                <div class="col-3">
+                    <div class="card" style="width: 15.5rem;">
+                        <img src="../img/appt-1.jpeg" class="s3-img card-img-top" alt="...">
+                        <div class="s3-box1 card-body">
+                            <p class="s3-t1 card-title">Appartement proche de toutes comodités</p>
+                            <p class="s3-t13 card-title">Lyon - FRANCE</p>
+                            <div class="s3-t2">
+                                <i class="s3-crown1 fas fa-crown"></i>
+                                <i class="s3-car4-1 fas fa-car-side"></i>
+                                <i class="s3-car4-2 fas fa-car-side"></i>
+                                <i class="s3-car4-3 fas fa-car-side"></i>
+                                <img src="../img/member-1.png" width="40" height="40" alt="">
+                                <img src="../img/unknow-user.png" width="40" height="40" alt="">
+                                <img src="../img/member-3.png" width="40" height="40" alt="">
+                                <img src="../img/member-4.png" width="40" height="40" alt="">
+                                <img src="../img/member-8.png" width="40" height="40" alt="">
+                                <img src="../img/member-6.png" width="40" height="40" alt="">
+                                <img src="../img/add.png" width="40" height="40" alt="">
+                                <img src="../img/next.png" width="40" height="40" alt="">
+                            </div>
+                            <div class="s3-t3 row">
+                                <div class="s3-t4col col">
+                                    <p class="s3-t4 card-text">6 participants</p>
+                                </div>
+                                <div class="s3-t5col col">
+                                    <p class="s3-t5 card-text">4 places restantes</p>
+                                </div>
+                            </div>
+                            <div class="s3-t6 row">
+                                <div class="col">
+                                    <p class="s3-t7 card-text">Restaurant </p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t8 card-text">Spa</p>
+                                </div>
+                                <div class="col">
+                                    <p class="s3-t9 card-text">Yoga</p>
+                                </div>
+                            </div>
+                            <p class="s3-t10">du 20/02/2019 au 25/02/2019</p>
+                            <p class="s3-t11"><span class="s3-price">30€</span> par nuit</p>
+                        </div>
+                        <div class="s3-box2 card-body">
+                            <div class="s3-t12 row">
+                                <div class="s3-btn1-col col">
+                                    <a href="#" class="s3-btn1 btn card-link">Voir l'offre</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/SECTION-5-FILTRE-PAYS-->
+    <!--FOOTER-->
+    <div class="wall-footer">
+        <div class="bg-footer container">
+            <div class="row">
+                <div class="col">
+                    <a class="h-logo-grp2 navbar-brand" href="#">
+                        <img class="h-logo2" src="../img/logo.png" width="58" height="58" class="d-inline-block align-top"
+                            alt="">
+                        <span class="footer-logo">Stuliday</span>
+                    </a>
+                    <div class="footer-soc">
+                        <h3 class="footer-t2">RESEAUX SOCIAUX</i>
+                    </div>
+                    <i class="footer-social footer-ico fab fa-facebook-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-twitter-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-linkedin fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-google-plus-square fa-3x"></i>
+                    <i class="footer-social footer-ico fab fa-youtube-square fa-3x"></i>
+                    <i class="footer-social-last footer-ico fab fa-instagram fa-3x"></i>
+                </div>
+                <div class="col">
+                    <h3 class="footer-t1">Application mobile <i class="fab fa-android"></i>
+                        <i class="fab fa-app-store-ios"></i></h3>
+                    <form class="form-block">
+                        <div class="form-footer-1">
+                            <input type="password" class="form-footer-2 form-control" id="inputPassword2" placeholder="Téléphone">
+                        </div>
+                        <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                    </form>
+                    <div class="form-footer-grp2">
+                        <h3 class="footer-t2">Abonnement Newsletter <i class="fas fa-envelope"></i></h3>
+                        <form class="form-block">
+                            <div class="form-footer-1">
+                                <input type="password" class="form-footer-2 form-control" id="inputPassword2"
+                                    placeholder="Mail">
+                            </div>
+                            <button type="submit" class="footer-btn btn btn-primary mb-2">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-c3 col">
+                    <h3 class="footer-t3">Contact <i class="fas fa-user"></i></h3>
+                    <div class="footer-con">
+                        <div class="footer-about row">
+                            <div class="footer-links col">
+                                <a href="about-us.html">Qui sommes nous ?</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="recrut.html">Recrutement</a>
+                            </div>
+                            <div class="footer-links col">
+                                <a href="#">Conditions&Termes</a>
+                            </div>
+                        </div>
+                        <p><i class="fas fa-map-marked-alt"></i> <span class="bold">Adresse :</span> 45 rue Thiac 33000
+                            BORDEAUX</p>
+                        <p><i class="fas fa-phone"></i> <span class="bold">Tel :</span> 06 17 39 45 41</p>
+                        <p><i class="fas fa-envelope"></i> <span class="bold">Mail :</span> remycha@msn.com</p>
+                        <p>© 2019 Stuliday. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/FOOTER-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
